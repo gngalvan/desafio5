@@ -1,0 +1,437 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+nav{
+	display: flex;
+	justify-content: end;
+	background-color: black;
+	font-family: 'Nunito', sans-serif;
+	height: 90px;
+	align-items: center;
+	position:fixed;
+	width: 100%;
+}
+
+
+
+/*estilo de menu*/
+
+.menu{
+	display: flex;
+	justify-content: end;
+	width: 100%;
+	align-items: center;	
+}
+
+.menu > li{
+	position: relative;
+    display: inline-block;
+}
+
+.menu > li > a{
+	color: white;
+	font-weight: bold;
+    padding: 1px 15px;
+    display: block;
+}
+
+.menu > li > a:hover{
+	font-size: 1.2em;
+	transition: all 0.02s linear;
+
+}
+
+.menu li:hover .subMenu{
+	display: block;
+}
+
+.subMenu{
+	display: none;
+	position: absolute;
+	padding: 5px;
+	background-color: black;
+	width: 100%;
+	margin-top: 1px;
+	padding-top: 5px;
+	list-style: none;
+}
+
+.subMenu li a{
+	color: white;
+	font-weight: bold;
+	padding: 5px;
+}
+
+
+
+/*diseño general*/
+
+a{
+    text-decoration: none;
+}
+
+.mainInicio{
+	display: grid;
+	padding-top: 90px;
+	font-family: 'Nunito', sans-serif;
+	grid-template-areas: 	"h1 h1 h1"
+							"remera1 remera2 remera3"
+							"slider slider slider";
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto;
+}
+
+h1{
+	display: flex;
+	grid-area: h1;
+	justify-content: center;
+}
+
+main h2{
+	text-align: center;
+}
+
+main h3{
+	text-align: center;
+}
+
+main p{
+	text-align: center;
+}
+
+main p span{
+	font-weight: bold;
+}
+
+.mainInicio > div > div > img{
+	height: 300px;
+	width: 500px;
+}
+
+
+/*contenedor de productos*/
+
+.contenedorProducto{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	grid-area: remera1;
+}
+
+.contenedorProducto2{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	grid-area: remera2;
+}
+
+.contenedorProducto3{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	grid-area: remera3;
+}
+
+.productoInicio{
+	border: solid black 1px;
+	margin: 10px;
+}
+
+
+.productoInicio h5{
+	margin: 7px 15px;
+}
+
+.productoInicio p{
+	margin: 7px 15px;
+}
+
+.productoInicio button{
+	margin: 7px 15px;
+}
+
+
+
+/*pagina productos*/
+
+.mainProductos{
+	display: grid;
+	padding-top: 90px;
+	font-family: 'Nunito', sans-serif;
+	grid-template-areas: 	"h2 h2 h2"
+							"productoDestacado1 productoDestacado1 productoDestacado2"
+							"h3 h3 h3"
+							"productoP1 productoP2 productoP3";
+	column-gap: 1em;
+}
+
+.mainProductos div > img{
+	height: 300px;
+	width: 500px;
+}
+
+.h2Productos{
+	display: flex;
+	justify-content: center;
+	grid-area: h2;
+}
+
+.h3Productos{
+	display: flex;
+	justify-content: center;
+	grid-area: h3;
+}
+
+.contenedorProductosDestacados1{
+	display: grid;
+	grid-area: productoDestacado1;
+	border: solid 1px #000;
+	background-color: red;
+}
+.contenedorProductosDestacados2{
+	display: grid;
+	grid-area: productoDestacado2;
+	border: solid 1px #000;
+	background-color: red;
+}
+
+.contenedorProductoP{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	grid-area: productoP1;
+}
+
+.contenedorProductoP2{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	grid-area: productoP2;
+}
+.contenedorProductoP3{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	grid-area: productoP3;
+}
+
+
+
+/*slider*/
+
+.slider {
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+	grid-area: slider;
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider img {
+	width: 100%;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+
+
+
+/*contenedor de ofertas*/
+
+.contenedorOfertasPrincipales{
+	display: grid;
+	justify-content: center;
+}
+
+.productoOfertasPrincipales{
+	border: solid black 1px;
+	margin: 10px;
+	width: 500px;
+	height: 400px;
+}
+
+.productoOfertasPrincipales img{
+	width: 100%;
+}
+
+.contenedorOtrasOFertas{
+	display: flex;
+	justify-content: center;
+}
+
+.productoOtrasOfertas{
+	border: solid black 1px;
+	margin: 10px;
+	width: 300px;
+	height: 250px;
+}
+
+.productoOtrasOfertas img{
+	width: 100%;
+}
+
+
+
+
+/*footer*/
+
+footer{
+	background-color: black;
+	color: white;
+	font-family: 'Nunito', sans-serif;
+	width: 100%;
+}
+
+footer a{
+	margin: 10px;
+}
+
+footer h4{
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+
+footer h6{
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+
+footer div{
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+
+
+
+
+/*responsive*/
+
+@media (max-width: 360px) {
+	
+	nav{
+		display: flex;
+		height: 100px;
+		width: 360px;
+		flex-direction: column;
+	}
+	header{
+		font-size: 0.8em;
+		width: 360px;
+	} 
+	.menu > li{
+		padding: 5px;
+		
+	}
+	.mainInicio{
+		margin-left:20px;
+		width: 360px;
+		grid-template-areas: 	"h1"
+								"remera1" 
+								"remera2" 
+								"remera3"
+								"slider";
+	}
+	.mainInicio > div > div > img{
+		height: 150px;
+		width: 300px;
+	}
+	h1{
+		display: flex;
+		margin-top: 15px;
+		grid-area: h1;
+		justify-content: center;
+	}
+	footer{
+		width: 360px;
+	}
+
+
+	.mainProductos{
+		display: grid;
+		width: 360px;
+		font-family: 'Nunito', sans-serif;
+		grid-template-areas: 	"h2"
+								"productoDestacado1"
+								"productoDestacado2"
+								"h3"
+								"productoP1"
+								"productoP2"
+								"productoP3";
+		column-gap: 1em;
+	}
+
+	.mainProductos > div > div > img{
+		height: 150px;
+		width: 300px;
+	}
+}
+
+@media (max-width: 769px){
+	
+	.mainInicio{
+		display: grid;
+		grid-template-areas: 	"h1"
+								"remera1"
+								"remera2"
+								"remera3"
+								"slider";
+		margin-left: 100px;
+	}
+	.mainProductos{
+		display: grid;
+		grid-template-areas: 	"h2"
+								"productoDestacado1"
+								"productoDestacado2"
+								"h3"
+								"productoP1"
+								"productoP2"
+								"productoP3";
+
+	}
+	.contenedorProductosDestacados1{
+		display: grid;
+		grid-area: productoDestacado1;
+		border: solid 1px #000;
+		background-color: red;
+		width: 90%;
+		margin-left: 35px;
+	}
+	.contenedorProductosDestacados2{
+		display: grid;
+		grid-area: productoDestacado2;
+		border: solid 1px #000;
+		background-color: red;
+		width: 90%;
+		margin-left: 35px;
+	}
+}
+
+
